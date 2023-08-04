@@ -54,7 +54,7 @@ header {
   width:100%;
 }
 
-.header-conteiener {
+.header-conteiner {
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -141,10 +141,7 @@ header {
     margin-top: 46px;
   }
 
-  /*i {
-    margin-top: 16px;
-    font-size:50px;
-  }*/
+ 
 
   .header-button {
     display: none;
@@ -153,17 +150,22 @@ header {
 
 // conteudo prinicpal
 
-.main-conteiner {
-  color: var(--corwrite3);
-  min-width: 80vh;
+.con-geral {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 8px;
+}
 
+.main-conteiner {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  /*flex-direction: column;*/
   align-items: center;
   justify-content: center;
   padding: 14px;
+  color: var(--corwrite3);
 }
-h1 {
+.main-conteiner h1 {
   text-align: center;
   line-height:50px;
   max-width: 940px;
@@ -172,9 +174,9 @@ h1 {
 
 @media screen and (max-width:760px) {
   .main-conteiner {
-    min-width: 60vh;
+    min-height: 60vh;
 
-    h1 {
+    .main-conteiner h1 {
       font-size: 34px;
       padding: 0 14px;
       width: 100%;
@@ -257,10 +259,12 @@ h1 {
 }
 
 //***********//
+
 .servicos {
   background-color: var(--corblack1);
-  /*color: var(--corwrite3);*/
+  
   display: flex;
+  
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -278,7 +282,7 @@ h1 {
 
   .servicos-conteudo p {
     margin-bottom: 14px;
-    line-height:1em;
+    line-height:1.3em;
     font-weight:400;
     color: var(--corwrite3);
     margin-bottom: 15px;
@@ -287,6 +291,7 @@ h1 {
 
   .tipos-servicos {
     display: flex;
+    
     justify-content: center;
     align-items: center;
     gap: 14px;
@@ -296,6 +301,7 @@ h1 {
   .itens-servicos {
     flex: 1;
     display: flex;
+    
     flex-direction: column;
     background-color: var(--corbutton);
     border: 1px solid var(--corbutton);
@@ -304,7 +310,7 @@ h1 {
     color: var(--corblack2);
     overflow: hidden;
 
-    img {
+    .itens-servicos img {
       width: 100%;
       max-width: 354px;
       transition: transform 0.25s;
@@ -319,14 +325,13 @@ h1 {
     width:100%;
     display: flex;
     justify-content: center;
-    align-items: center;
     padding: 14px;
     font-family: Arial, Helvetica, sans-serif;
     z-index:99;
   }
 
   @media screen and (max-width: 760px) {
-    .servicos {
+    .tipos-servicos {
       flex-direction: column;
     }
   }
@@ -334,6 +339,8 @@ h1 {
   .itens-servicos img {
     max-width: 740px;
   }
+
+  // footer
 
   .footer {
     display: flex;
@@ -356,6 +363,7 @@ h1 {
   .copy {
     width: 100%;
     display: flex;
+   
     align-items: center;
     justify-content: center;
     color: var(--corwrite3);
